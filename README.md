@@ -15,7 +15,7 @@ make sint # for SInt Queue. Error expected
 ```
 or
 ```bash
-make uint # for UInt Queue. Should be succesfull
+make uint # for UInt Queue. Should be successfull
 ```
 
 The makeflow  used in this example is based on the [common.mk](https://github.com/ucb-bar/chipyard/blob/main/common.mk) from chipyard.
