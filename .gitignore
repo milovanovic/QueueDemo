@@ -1,0 +1,7 @@
+test_and_run/
+*.fir
+*.f
+*.anno.json
+target/*
+project/*
+.bsp/*
