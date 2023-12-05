@@ -56,7 +56,6 @@ verilog:
 	-mv $(SFC_FIRRTL_BASENAME).lo.fir $(SFC_FIRRTL_FILE) 2> /dev/null # Optionally change file type when SFC generates LowFIRRTL
 	firtool \
 		--format=fir \
-		--dedup \
 		--export-module-hierarchy \
 		--verify-each=true \
 		--warn-on-unprocessed-annotations \
