@@ -1,11 +1,11 @@
 # Memory demo
 
-These examples are simplified versions of the problem stated [here](https://github.com/milovanovic/chipyard/tree/1.9.0_queue) expanded for multiple memory classes. Scala code for this example can be found [here](./src/main/scala/example/MemExample.scala).
+These examples are a simplified version of the [previously posted problem](https://github.com/milovanovic/chipyard/tree/1.9.0_queue) expanded for multiple memory classes. Scala code for this example can be found [here](./src/main/scala/example/MemExample.scala).
 
-Main problem is that transformation of SInt memories cannot be performed.
+The main problem is that the transformation of `SInt`-based memories cannot be performed.
 
 For `UInt`-based *Queue*, *Mem* or *SyncReadMem*, Verilog code will be succesfully generated but for `SInt`-based memories Verilog generation fails with the following error:
-```bash
+```scala
 Decoupled.scala:274:95: error: memories should be flattened before running LowerMemory
 Decoupled.scala:274:95: note: see current operation: %5:2 = "firrtl.mem"() {annotations = [], depth = 1024 : i64, name = "ram", nameKind = #firrtl<name_kind droppable_name>, portAnnotations = [[], []], portNames = ["MPORT", "io_deq_bits_MPORT"], readLatency = 0 : i32, ruw = 0 : i32, writeLatency = 1 : i32} : () -> (!firrtl.bundle<addr: uint<10>, en: uint<1>, clk: clock, data: sint<16>, mask: uint<1>>, !firrtl.bundle<addr: uint<10>, en: uint<1>, clk: clock, data flip: sint<16>>)
 ```
